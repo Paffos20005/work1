@@ -1,0 +1,34 @@
+﻿<Window x:Class="working.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:working"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Синий" Click="BlueItem_Click" ToolTip="Изменить цвет фона на синий"/>
+                <MenuItem Header="Зеленый" Click="GreenItem_Click" ToolTip="Изменить цвет фона на зеленый"/>
+                <MenuItem Header="Закрыть" Click="CloseItem_Click" ToolTip="Закрыть приложение"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О разработчике" Click="RazrabItem_Click" ToolTip="Информация о разработчике"/>
+            </MenuItem>
+        </Menu>
+
+        <ToolBar VerticalAlignment="Top">
+            <Button Content="Синий" Click="BlueItem_Click" ToolTip="Изменить цвет фона на синий" VerticalAlignment="Bottom" Width="107" Background="Blue" Foreground="Red"/>
+            <Button Content="Зеленый" Click="GreenItem_Click" ToolTip="Изменить цвет фона на зеленый" Width="108" Background="Green" Foreground="Yellow"/>
+            <Separator/>
+            <Button Content="Закрыть" Click="CloseItem_Click" ToolTip="Закрыть приложение" Width="185" Background="Black" Foreground="White"/>
+            <Button Content="О разработчике" Click="RazrabItem_Click" ToolTip="Информация о разработчике" Width="107" Background="Purple" Foreground="Orange"/>
+        </ToolBar>
+
+        <StatusBar VerticalAlignment="Bottom">
+            <TextBlock x:Name="StatusText" Text="Готов."/>
+        </StatusBar>
+
+    </Grid>
+</Window>
