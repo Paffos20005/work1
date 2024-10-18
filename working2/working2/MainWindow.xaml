@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <ToolBar>
-                <ComboBox x:Name="ColorComboBox" SelectedIndex="0" Width="100" Margin="5">
+                <ComboBox x:Name="ColorComboBox" SelectedIndex="0" Width="100" Margin="5" SelectionChanged="ColorComboBox_SelectionChanged">
                     <ComboBoxItem Content="Красный" />
                     <ComboBoxItem Content="Зеленый" />
                     <ComboBoxItem Content="Синий" />
@@ -18,7 +18,7 @@
                 </ComboBox>
 
                 <TextBlock Text="Размер кисти:" Margin="5"/>
-                <Slider x:Name="BrushSizeSlider" Minimum="1" Maximum="50" Value="5" Width="150" Margin="5" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Slider x:Name="BrushSizeSlider" Minimum="1" Maximum="50" Value="5" Width="150" Margin="5" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="BrushSizeSlider_ValueChanged"/>
 
                 <ToggleButton x:Name="DrawModeToggle" Content="Рисование" Margin="5" Checked="DrawModeToggle_Checked" Unchecked="DrawModeToggle_Unchecked"/>
                 <ToggleButton x:Name="EditModeToggle" Content="Редактирование" Margin="5" Checked="EditModeToggle_Checked" Unchecked="EditModeToggle_Unchecked"/>

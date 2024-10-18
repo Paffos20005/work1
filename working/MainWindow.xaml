@@ -1,0 +1,32 @@
+﻿<Window x:Class="workinggggg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:workinggggg"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="BurlyWood">
+    <Grid>
+        <TabControl x:Name="tabcontrol1" HorizontalAlignment="Left" Height="286" Margin="65,56,0,0" VerticalAlignment="Top" Width="661">
+            <TabItem Header="Вкладка 1">
+                <Grid Background="LightBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="111*"/>
+                        <ColumnDefinition Width="544*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Background="Green" Foreground="Yellow" Content="Далее" Grid.Column="1" HorizontalAlignment="Left" Margin="434,206,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" Height="42" RenderTransformOrigin="0.012,0.711"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Вкладка 2">
+                <Grid Background="LightGreen">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="644*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Background="Purple" Foreground="Gree" Content="Назад" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="100" Height="42" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
