@@ -1,0 +1,32 @@
+﻿<Window x:Class="workinggg2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:workinggg2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <ToolBar>
+                <ComboBox x:Name="ColorComboBox" SelectedIndex="0" Width="100" Margin="5" SelectionChanged="ColorComboBox_1">
+                    <ComboBoxItem Content="Красный" />
+                    <ComboBoxItem Content="Зеленый" />
+                    <ComboBoxItem Content="Синий" />
+                    <ComboBoxItem Content="Черный" />
+                    <ComboBoxItem Content="Желтый" />
+                </ComboBox>
+
+                <TextBlock Text="Размер кисти:" Margin="5"/>
+                <Slider x:Name="BrushSizeSlider" Minimum="1" Maximum="50" Value="5" Width="150" Margin="5" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="BrushSizeSlider_ValueChanged"/>
+
+                <ToggleButton x:Name="DrawModeToggle" Content="Рисование" Margin="5" Checked="DrawModeToggle_Checked" Unchecked="DrawModeToggle_Unchecked"/>
+                <ToggleButton x:Name="EditModeToggle" Content="Редактирование" Margin="5" Checked="EditModeToggle_Checked" Unchecked="EditModeToggle_Unchecked"/>
+                <ToggleButton x:Name="DeleteModeToggle" Content="Удаление" Margin="5" Checked="DeleteModeToggle_Checked" Unchecked="DeleteModeToggle_Unchecked"/>
+            </ToolBar>
+
+            <Canvas x:Name="DrawingCanvas" Background="White" Margin="5" MouseMove="DrawingCanvas_MouseMove" MouseLeftButtonDown="DrawingCanvas_MouseLeftButtonDown" MouseLeftButtonUp="DrawingCanvas_MouseLeftButtonUp">
+            </Canvas>
+        </StackPanel>
+    </Grid>
+</Window>
